@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/environment",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Handles the lifecyle and bootstrapping of investigators in a specific environment",
   "homepage": "http://whodunit.io",
   "author": "whodunit",
@@ -50,7 +50,7 @@
     "wrap-ansi": "^5.1.0"
   },
   "devDependencies": {
-    "@whodunit/assert": "^1.0.1",
+    "@whodunit/assert": "^1.0.3",
     "coveralls": "^3.0.2",
     "jsdoc": "^3.5.5",
     "matcha": "^0.7.0",

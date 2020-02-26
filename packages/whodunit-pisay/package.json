@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/pisay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tell whodunit what to say",
   "license": "BSD-2-Clause",
   "repository": "whodunit/packages/whodunit-pisay",

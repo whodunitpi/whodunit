@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/test",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Test utilities for whodunit investigators",
   "homepage": "http://whodunit.io/authoring/testing.html",
   "author": "The whodunit Team",
@@ -27,8 +27,8 @@
     "prettier": "^1.7.0"
   },
   "dependencies": {
-    "@whodunit/environment": "^1.0.1",
-    "@whodunit/investigator": "^1.0.1",
+    "@whodunit/environment": "^1.0.3",
+    "@whodunit/investigator": "^1.0.3",
     "inquirer": "^6.0.0",
     "lodash": "^4.17.10",
     "mkdirp": "^0.5.1",
