@@ -2,8 +2,6 @@
 
 > Detect potential issues with users system that could prevent whodunit from working correctly
 
-![](screenshot.png)
-
 
 ## Usage
 
