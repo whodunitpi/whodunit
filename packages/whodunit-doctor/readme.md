@@ -1,4 +1,4 @@
-# whodunit Doctor [![Build Status](https://travis-ci.org/whodunit/doctor.svg?branch=master)](https://travis-ci.org/whodunit/doctor)
+# whodunit Doctor 
 
 > Detect potential issues with users system that could prevent whodunit from working correctly
 
@@ -7,10 +7,10 @@
 
 ## Usage
 
-Use as part of [`yo`](https://github.com/whodunit/yo):
+Use as part of [`pi`](https://github.com/whodunitpi/whodunit/packages/whodunit-pi):
 
 ```
-$ yo doctor
+$ pi doctor
 ```
 
 Can also be run with `pidoctor` if installed globally.
