@@ -4,6 +4,17 @@ Whodunit helps you to investigate application issues, providing a framework for 
 
 To do so, we provide an [investigator ecosystem]. An investigator is basically a plugin that can be run with the `pi` command to troubleshoot your production environment.
 
+## Setup
+
+```sh
+# build it
+npm install
+lerna bootstrap
+
+# run it
+node packages/whodunit-pi/lib/cli.js
+```
+
 ## Usage
 
 ```sh
