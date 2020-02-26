@@ -19,7 +19,7 @@ node packages/whodunit-pi/lib/cli.js
 
 ```sh
 # install pi
-npm install --global pi
+npm install --global @whodunit/pi
 
 # install an investigator
 npm install --global investigator-ipauth
