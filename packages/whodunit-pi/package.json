@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/pi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool for running Whodunit investigators",
   "license": "BSD-2-Clause",
   "repository": "whodunit/packages/whodunit-pi",

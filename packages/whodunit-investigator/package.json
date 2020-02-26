@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/investigator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "yeoman inspired (actually stolen) investigator system to troubleshoot your production environment",
   "homepage": "http://whodunit.io",
   "author": "whodunit",

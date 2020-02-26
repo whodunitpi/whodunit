@@ -1,6 +1,6 @@
 {
 	"name": "@whodunit/doctor",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Detect potential issues with users system that could prevent whodunit from working correctly",
 	"license": "BSD-2-Clause",
 	"author": "whodunit",

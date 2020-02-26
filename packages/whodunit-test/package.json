@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Test utilities for whodunit investigators",
   "homepage": "http://whodunit.io/authoring/testing.html",
   "author": "The whodunit Team",
