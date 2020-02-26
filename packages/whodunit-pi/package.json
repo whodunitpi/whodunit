@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/pi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI tool for running Whodunit investigators",
   "license": "BSD-2-Clause",
   "repository": "whodunit/packages/whodunit-pi",
@@ -41,10 +41,10 @@
     "boilerplate"
   ],
   "dependencies": {
-    "@whodunit/character": "^1.0.3",
-    "@whodunit/doctor": "^1.0.3",
-    "@whodunit/environment": "^1.0.3",
-    "@whodunit/pisay": "^1.0.3",
+    "@whodunit/character": "^1.0.4",
+    "@whodunit/doctor": "^1.0.4",
+    "@whodunit/environment": "^1.0.4",
+    "@whodunit/pisay": "^1.0.4",
     "async": "^2.6.1",
     "chalk": "^2.4.1",
     "cli-list": "^0.2.0",

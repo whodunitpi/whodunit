@@ -1,6 +1,6 @@
 {
   "name": "@whodunit/assert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Assert utility from whodunit",
   "license": "BSD-2-Clause",
   "repository": "whodunit/packages/whodunit-assert",
