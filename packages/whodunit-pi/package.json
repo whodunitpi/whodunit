@@ -1,5 +1,5 @@
 {
-  "name": "pi",
+  "name": "@whodunit/pi",
   "version": "1.0.0",
   "description": "CLI tool for running Whodunit investigators",
   "license": "BSD-2-Clause",
