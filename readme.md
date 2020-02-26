@@ -19,7 +19,7 @@ node packages/whodunit-pi/lib/cli.js
 
 ```sh
 # install pi
-npm install --global pi
+npm install --global @whodunit/pi
 
 # install an investigator
 npm install --global investigator-ipauth
@@ -173,4 +173,4 @@ Whodunit uses a fork of the Yeoman framework for code generators, except Whoduni
 
 ## License
 
-BSD-2-Clause © Google (Original Author of yeoman) © EBSCO Information Services (Derived from yeoman)
+BSD-2-Clause © Google (Original Author of yeoman) © Ken Goodridge (Derived from yeoman)
