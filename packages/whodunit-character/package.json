@@ -1,0 +1,39 @@
+{
+  "name": "@whodunit/character",
+  "version": "1.0.0",
+  "description": "The Whodunit character in your CLI. Like wat.",
+  "license": "MIT",
+  "repository": "whodunit/packages/whodunit-character",
+  "author": "whodunit",
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "whodunit.txt"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "whodunit",
+    "character",
+    "figure",
+    "logo",
+    "color",
+    "ansi",
+    "ascii",
+    "art"
+  ],
+  "dependencies": {
+    "supports-color": "^3.1.2"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}

@@ -1,0 +1,117 @@
+'use strict';
+const assert = require('assert');
+const _ = require('lodash');
+const sinon = require('sinon');
+const inquirer = require('inquirer');
+const Router = require('../lib/router');
+const helpers = require('./helpers');
+
+describe('home route', () => {
+  beforeEach(function () {
+    this.sandbox = sinon.createSandbox();
+    this.insight = helpers.fakeInsight();
+    this.env = helpers.fakeEnv();
+    this.router = new Router(this.env, this.insight);
+    this.router.registerRoute('home', require('../lib/routes/home'));
+    this.runRoute = sinon.spy();
+    this.router.registerRoute('run', this.runRoute);
+    this.helpRoute = sinon.spy();
+    this.router.registerRoute('help', this.helpRoute);
+    this.installRoute = sinon.spy();
+    this.router.registerRoute('install', this.installRoute);
+    this.updateRoute = sinon.spy();
+    this.router.registerRoute('update', this.updateRoute);
+  });
+
+  afterEach(function () {
+    this.sandbox.restore();
+  });
+
+  it('track usage', function () {
+    this.sandbox.stub(inquirer, 'prompt').returns(Promise.resolve({whatNext: 'exit'}));
+    return this.router.navigate('home').then(() => {
+      sinon.assert.calledWith(this.insight.track, 'pipi', 'home');
+    });
+  });
+
+  it('allow going to help', function () {
+    this.sandbox.stub(inquirer, 'prompt').returns(Promise.resolve({whatNext: 'help'}));
+    return this.router.navigate('home').then(() => {
+      sinon.assert.calledOnce(this.helpRoute);
+    });
+  });
+
+  it('allow going to install', function () {
+    this.sandbox.stub(inquirer, 'prompt').returns(Promise.resolve({whatNext: 'install'}));
+    return this.router.navigate('home').then(() => {
+      sinon.assert.calledOnce(this.installRoute);
+    });
+  });
+
+  it('does not display update options if no investigators is installed', function () {
+    this.router.investigator = [];
+    this.sandbox.stub(inquirer, 'prompt').callsFake(prompts => {
+      assert.equal(_.map(prompts[0].choices, 'value').includes('update'), false);
+      return Promise.resolve({whatNext: 'exit'});
+    });
+
+    return this.router.navigate('home');
+  });
+
+  it('show update menu option if there is installed investigators', function () {
+    this.router.investigators = [{
+      namespace: 'unicorn:app',
+      appInvestigator: true,
+      prettyName: 'unicorn',
+      updateAvailable: false
+    }];
+
+    this.sandbox.stub(inquirer, 'prompt').callsFake(prompts => {
+      assert(_.map(prompts[0].choices, 'value').includes('update'));
+      return Promise.resolve({whatNext: 'update'});
+    });
+
+    return this.router.navigate('home').then(() => {
+      sinon.assert.calledOnce(this.updateRoute);
+    });
+  });
+
+  it('list runnable investigators', function () {
+    this.router.investigators = [{
+      namespace: 'unicorn:app',
+      appInvestigator: true,
+      prettyName: 'unicorn',
+      updateAvailable: false
+    }];
+
+    this.sandbox.stub(inquirer, 'prompt').callsFake(prompts => {
+      assert.equal(prompts[0].choices[1].value.investigator, 'unicorn:app');
+      return Promise.resolve({
+        whatNext: {
+          method: 'run',
+          investigator: 'unicorn:app'
+        }
+      });
+    });
+
+    return this.router.navigate('home').then(() => {
+      sinon.assert.calledWith(this.runRoute, this.router, 'unicorn:app');
+    });
+  });
+
+  it('show update available message behind investigator name', function () {
+    this.router.investigators = [{
+      namespace: 'unicorn:app',
+      appInvestigator: true,
+      prettyName: 'unicorn',
+      updateAvailable: true
+    }];
+
+    this.sandbox.stub(inquirer, 'prompt').callsFake(prompts => {
+      assert(prompts[0].choices[1].name.includes('♥ Update Available!'));
+      return Promise.resolve({whatNext: 'exit'});
+    });
+
+    return this.router.navigate('home');
+  });
+});

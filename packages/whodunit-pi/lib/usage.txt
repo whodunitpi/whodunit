@@ -1,0 +1,36 @@
+Usage: pi GENERATOR [args] [options]
+
+General options:
+  --help         # Print this info and investigator's options and usage
+  -f, --force    # Overwrite files that already exist
+  --version      # Print version
+  --no-color     # Disable colors
+  --[no-]insight # Toggle anonymous tracking
+  --investigators	 # Print available investigators
+
+Install an investigator:
+
+  Investigators can be installed through npm.
+
+  $ npm install investigator-angular
+  $ pi angular --help
+
+Run local investigators:
+  
+  Additionally, you can also run local investigators without installing via npm.
+
+  $ pi ./path/to/some/investigator
+
+Completion:
+
+  To enable shell completion for the pi command, try running
+
+  $ pi completion
+
+Troubleshooting:
+
+  For any issues, try running
+
+  $ pi doctor
+
+Full Documentation: http://whodunit.io

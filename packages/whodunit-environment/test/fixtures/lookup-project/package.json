@@ -1,0 +1,8 @@
+{
+  "name": "lookup-dummy-env",
+  "dependencies": {
+    "investigator-commonjs": "*",
+    "investigator-dummy": "~0.1.0",
+    "investigator-jquery": "^1.2.3"
+  }
+}

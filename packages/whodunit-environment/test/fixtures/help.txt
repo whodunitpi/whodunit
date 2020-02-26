@@ -1,0 +1,14 @@
+Usage: init GENERATOR [args] [options]
+
+General options:
+  --help       # Print investigator's options and usage
+  -f, --force  # Overwrite files that already exist
+
+Please choose an investigator below.
+
+
+Extend
+  extend:support
+
+Simple
+  simple
