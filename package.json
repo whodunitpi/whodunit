@@ -1,11 +1,25 @@
 {
   "name": "root",
-  "private": true,
+  "version": "1.0.0",
+  "author": "whodunit",
+  "license": "BSD-2-Clause",
+  "private": false,
+  "scripts": {
+    "test": "exit 0",
+    "lerna": "lerna",
+    "bootstrap": "lerna bootstrap",
+    "dev": "lerna run build --stream --parallel",
+    "lerna:version": "lerna version prerelease --preid beta && yarn run lerna:postversion",
+    "lerna:postversion": "chan release --group-changes $(node -p -e \"require('./lerna.json').version\") && git add CHANGELOG.md && git commit -m \"Update: changelog\" && git push --follow-tags",
+    "prepublish": "lerna run prepublish",
+    "lerna:publish": "lerna publish from-git --yes --npm-client yarn --npm-tag beta"
+  },
   "devDependencies": {
     "lerna": "^3.20.2",
     "dot-prop": "^5.1.1"
   },
-  "dependencies": {
-    "@whodunit/pisay": "^1.0.3"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whodunitpi/whodunit.git"
   }
 }
