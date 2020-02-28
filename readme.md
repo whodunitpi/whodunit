@@ -1,8 +1,11 @@
+# Whodunit (pronounced "Who Done It")
+[![Build Status](https://api.travis-ci.org/whodunitpi/whodunit.svg?branch=master)](https://travis-ci.org/whodunitpi/whodunit)
+
 ## What's Whodunit?
 
-Whodunit helps you to investigate application issues, providing a framework for troubleshooting production environments.
+Whodunit is a NodeJS framework for troubleshooting production environments.
 
-To do so, we provide an [investigator ecosystem]. An investigator is basically a plugin that can be run with the `pi` command to troubleshoot your production environment.
+To do so, this monorepo provides an investigator ecosystem. An investigator is basically a plugin that can be run with the `pi` command to troubleshoot your production environment.
 
 ## Setup
 
