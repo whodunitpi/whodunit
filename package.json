@@ -18,14 +18,14 @@
     "dot-prop": "^5.1.1",
     "eslint": "^6.8.0",
     "eslint-config-xo-space": "^0.15.0",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-exclude-gitignore": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
-    "lerna": "^3.20.2" 
+    "lerna": "^3.20.2"
   },
   "repository": {
     "type": "git",
