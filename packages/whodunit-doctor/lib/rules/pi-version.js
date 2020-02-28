@@ -13,7 +13,7 @@ const errors = {
 exports.errors = errors;
 
 exports.verify = cb => {
-  latestVersion('pi').catch(err => {
+  latestVersion('@whodunit/pi').catch(err => {
     console.error(err);
     cb(err);
   }).then(version => {
