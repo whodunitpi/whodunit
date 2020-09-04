@@ -59,7 +59,7 @@
     "inquirer": "^6.0.0",
     "insight": "^0.10.1",
     "lodash": "^4.17.10",
-    "marked": "^0.6.1",
+    "marked": "^0.7.0",
     "marked-terminal": "^3.2.0",
     "meow": "^3.0.0",
     "npm-keyword": "^5.0.0",
